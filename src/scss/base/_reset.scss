@@ -5,6 +5,7 @@
 4. visual
 5. others
 */
+
 /* Box sizing rules */
 *,
 *::before,
@@ -24,7 +25,7 @@
 /* dark mode user-agent-styles */
 /* improves punctuation in supported browsers */
 html {
-	font-size: 100%;
+	font-size: 100%; //!to revision
 	hanging-punctuation: first last;
 	overflow-x: hidden;
 	color-scheme: dark light;
@@ -40,6 +41,7 @@ html:focus-within {
 	html:focus-within {
 		scroll-behavior: auto;
 	}
+
 	*,
 	*::before,
 	*::after {
@@ -49,12 +51,15 @@ html:focus-within {
 		scroll-behavior: auto !important;
 	}
 }
+
 /* Add smooth scroll on targets*/
 @media (prefers-reduced-motion: no-preference) {
 	:has(:target) {
+		// scroll-padding-top: 3rem; //for sticky header or just add space
 		scroll-behavior: smooth;
 	}
 }
+
 /* Set core body defaults */
 body {
 	/* Ensure that the body fills the entire viewport. */
@@ -124,5 +129,3 @@ li {
 	max-width: 65ch;
 	text-wrap: pretty;
 }
-
-/*# sourceMappingURL=main.css.map */

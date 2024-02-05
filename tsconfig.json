@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "es2022",
-    "module": "commonjs",
-    "rootDir": "./src/ts",
-    "outDir": "./dist/js",
-    "sourceMap": true,
-    "removeComments": true,
-    "noEmitOnError": false,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "skipLibCheck": true
-  }
+	"compilerOptions": {
+		"target": "es2022",
+		"module": "commonjs",
+		"rootDir": "./src/ts",
+		"outDir": "./dist/js",
+		"sourceMap": true,
+		"removeComments": true,
+		"noEmitOnError": false,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noImplicitAny": true,
+		"skipLibCheck": true
+	}
 }
