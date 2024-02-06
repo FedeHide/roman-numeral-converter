@@ -1,16 +1,17 @@
 {
 	"name": "roman-numeral-converter",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"license": "MIT",
 	"author": {
 		"name": "@FedeHide"
 	},
 	"scripts": {
+		"watch-css": "nodemon -e scss -x \"pnpm run build-css\"",
+		"watch-ts": "tsc -w",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint src/ts/**/*.ts",
-		"build-css": "sass src/scss/main.scss dist/css/main.css",
-		"watch-css": "nodemon -e scss -x \"pnpm run build-css\""
+		"build-css": "sass src/scss/main.scss dist/css/main.css"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "6.21.0",
