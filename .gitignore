@@ -1,6 +1,8 @@
 # build output
 #dist/
 
+CONTRIBUTING.md
+
 # dependencies
 /node_modules
 pnpm-lock.yaml
