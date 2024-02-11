@@ -24,7 +24,7 @@ devDependencies:
     specifier: 16.6.2
     version: 16.6.2(eslint@8.56.0)
   eslint-plugin-prettier:
-    specifier: ^5.1.3
+    specifier: 5.1.3
     version: 5.1.3(eslint-config-prettier@9.1.0)(eslint@8.56.0)(prettier@3.2.5)
   eslint-plugin-promise:
     specifier: 6.1.1
@@ -38,6 +38,9 @@ devDependencies:
   prettier:
     specifier: 3.2.5
     version: 3.2.5
+  sass:
+    specifier: ^1.70.0
+    version: 1.70.0
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -1672,6 +1675,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable@4.3.5:
+    resolution: {integrity: sha512-8eabxkth9gZatlwl5TBuJnCsoTADlL6ftEr7A4qgdaTsPyreilDSnUk57SO+jfKcNtxPa22U5KK6DSeAYhpBJw==}
+    dev: true
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2676,6 +2683,16 @@ packages:
       yargs: 17.7.2
     dev: true
 
+  /sass@1.70.0:
+    resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.5
+      source-map-js: 1.0.2
+    dev: true
+
   /scss-tokenizer@0.4.3:
     resolution: {integrity: sha512-raKLgf1LI5QMQnG+RxHz6oK0sL3x3I4FN2UDLqgLOGO8hodECNnNh5BXn7fAyBxrA8zVzdQizQ6XjNJQ+uBwMw==}
     dependencies:
@@ -2794,6 +2811,11 @@ packages:
     dependencies:
       ip: 2.0.0
       smart-buffer: 4.2.0
+    dev: true
+
+  /source-map-js@1.0.2:
+    resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
+    engines: {node: '>=0.10.0'}
     dev: true
 
   /source-map@0.7.4:
