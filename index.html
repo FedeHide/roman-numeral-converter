@@ -5,10 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="dist/css/main.css">
-    <title>Title</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+    <title>Roman numeral Converter | freeCodeCamp</title>
 </head>
 
 <body>
+    <section class="main-section">
+        <h1 class="main-section__title">Roman Numeral Converter</h1>
+        <div id="output" class="main-section__result">XIV</div>
+        <div class="main-section__input-container">
+            <input id="number" class="main-section__input" type="number" placeholder="Please input a number"
+                required></input>
+        </div>
+        <button id="convert-btn" class="main-section__btn-check btn-check">
+            <a class="btn-check__a" href="#">
+                <span class="btn-check__top-key"></span>
+                <span class="btn-check__text">Check</span>
+                <span class="btn-check__bottom-key-1"></span>
+                <span class="btn-check__bottom-key-2"></span>
+            </a>
+        </button>
+    </section>
+    <section class="pad-section">
+        <div class="pad-section__grid">
+            <button type="submit" class="pad-section__btn" id="pad-btn1">1</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn2">2</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn3">3</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn4">4</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn5">5</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn6">6</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn7">7</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn8">8</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn9">9</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn1">&lt;</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn1">0</button>
+            <button type="submit" class="pad-section__btn" id="pad-btn1">C</button>
+        </div>
+    </section>
     <script defer src="dist/js/main.js"></script>
 </body>
 
