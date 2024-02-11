@@ -112,6 +112,18 @@ select {
 	font: inherit;
 }
 
+/* spin button off for webkit (chrome, safari) */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type='number'] {
+	-moz-appearance: textfield; /* spin button off for firefox */
+	appearance: textfield; /* standard */
+}
+
 /* Balance headings across multiple lines into an even block */
 h1,
 h2,
