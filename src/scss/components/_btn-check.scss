@@ -111,7 +111,6 @@
 		}
 	}
 
-	/* touch devices */
 	@include touch {
 		&:active {
 			color: $clr-font-white;
