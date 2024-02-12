@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.3.0](https://github.com/FedeHide/roman-numeral-converter/releases/tag/v0.3.0) (2024-xx-xx)
+
+### Other Changes
+
+* **add:** add OG, favicon, meta tags and readme imgage ([478a974](https://github.com/FedeHide/roman-numeral-converter/commit/478a974da68b11230600a411442eb115ff97054d))
+
 ## [v0.2.0](https://github.com/FedeHide/roman-numeral-converter/releases/tag/v0.2.0) (2024-02-12)
 
 ### Features
