@@ -3,28 +3,24 @@
 .btn-check {
 	background: transparent;
 	border-style: none;
+	position: relative;
+	display: inline-block;
+	padding: 1.25em 2em;
+	@include clamp-font-size(8px, 12px);
+	text-align: center;
+	font-weight: 700;
+	text-decoration: none;
+	text-transform: none;
+	letter-spacing: 0.05em;
+	border: 2px solid $clr-font-black;
+	outline: none;
+	color: $clr-font-white;
+	cursor: pointer;
+	overflow: visible;
+	transition: all 0.3s ease-in-out;
+	user-select: none;
 
-	&__a {
-		position: relative;
-		display: inline-block;
-		margin: 0;
-		padding: 1.25em 2em;
-		@include font-size(12px);
-		text-align: center;
-		font-weight: 700;
-		text-decoration: none;
-		text-transform: none;
-		letter-spacing: 0.05em;
-		border: 2px solid $clr-font-black;
-		outline: none;
-		color: $clr-font-white;
-		cursor: pointer;
-		overflow: visible;
-		transition: all 0.3s ease-in-out;
-		user-select: none;
-	}
-
-	&__a::before {
+	&::before {
 		content: ' ';
 		top: 50%;
 		position: absolute;
@@ -39,7 +35,7 @@
 			width 0.3s linear;
 	}
 
-	&__a &__text {
+	& &__text {
 		display: block;
 		padding-left: 2em;
 		text-align: left;
@@ -51,7 +47,7 @@
 		transition: all 0.3s ease-in-out;
 	}
 
-	&__a &__top-key {
+	& &__top-key {
 		position: absolute;
 		top: -2px;
 		left: 0.625rem;
@@ -63,7 +59,7 @@
 			left 0.3s ease-out;
 	}
 
-	&__a &__bottom-key-1 {
+	& &__bottom-key-1 {
 		position: absolute;
 		right: 1.875rem;
 		bottom: -2px;
@@ -75,7 +71,7 @@
 			right 0.3s ease-out;
 	}
 
-	&__a &__bottom-key-2 {
+	& &__bottom-key-2 {
 		position: absolute;
 		right: 0.625rem;
 		bottom: -2px;
@@ -88,28 +84,28 @@
 	}
 
 	@include hover {
-		&__a:hover {
+		&:hover {
 			color: $clr-font-white;
 			background: black;
 		}
 
-		&__a:hover::before {
+		&:hover::before {
 			width: 0.9375rem;
 			background: $clr-bg;
 		}
 
-		&__a:hover &__text {
+		&:hover &__text {
 			padding-left: 1.5em;
 			color: $clr-font-white;
 		}
 
-		&__a:hover &__top-key {
+		&:hover &__top-key {
 			left: -2px;
 			width: 0px;
 		}
 
-		&__a:hover &__bottom-key-1,
-		&__a:hover &__bottom-key-2 {
+		&:hover &__bottom-key-1,
+		&:hover &__bottom-key-2 {
 			right: 0;
 			width: 0;
 		}
@@ -117,28 +113,28 @@
 
 	/* touch devices */
 	@include touch {
-		&__a:active {
+		&:active {
 			color: $clr-font-white;
 			background: black;
 		}
 
-		&__a:active::before {
+		&:active::before {
 			width: 0.9375rem;
 			background: $clr-bg;
 		}
 
-		&__a:active &__text {
+		&:active &__text {
 			padding-left: 1.5em;
 			color: $clr-font-white;
 		}
 
-		&__a:active &__top-key {
+		&:active &__top-key {
 			left: -2px;
 			width: 0px;
 		}
 
-		&__a:active &__bottom-key-1,
-		&__a:active &__bottom-key-2 {
+		&:active &__bottom-key-1,
+		&:active &__bottom-key-2 {
 			right: 0;
 			width: 0;
 		}

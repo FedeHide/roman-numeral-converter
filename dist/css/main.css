@@ -138,16 +138,16 @@ li {
 }
 
 .main-section {
-  height: 60vh;
+  height: 100dvh;
   display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding-block: min(10vh, 10rem);
+  padding-block: min(10vh, 8rem);
   font-family: "GFS Didot", serif;
   text-align: center;
   font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.8125rem);
   background-color: hsl(0, 0%, 91%);
-  gap: 35px;
   user-select: none;
 }
 .main-section__title {
@@ -156,26 +156,8 @@ li {
 }
 .main-section__result {
   color: hsl(0, 4%, 9%);
-}
-
-section:nth-child(2) {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 40vh;
-}
-
-section:nth-child(2) h1 {
-  font-size: 2.5rem;
-  margin-block: 1.2rem;
-}
-
-section:nth-child(2) h3 {
-  font-size: 1.5rem;
-  margin-block: 1rem;
+  height: 2rem;
+  line-height: 2rem;
 }
 
 .main-section {
@@ -184,8 +166,7 @@ section:nth-child(2) h3 {
 .main-section__input-container {
   position: relative;
   display: inline-block;
-  margin: 0;
-  font-size: 1.5rem;
+  font-size: clamp(0.75rem, 2.5vw + 0.5rem, 1.5rem);
   text-align: center;
   font-weight: 700;
   text-decoration: none;
@@ -277,14 +258,10 @@ section:nth-child(2) h3 {
 .btn-check {
   background: transparent;
   border-style: none;
-  /* touch devices */
-}
-.btn-check__a {
   position: relative;
   display: inline-block;
-  margin: 0;
   padding: 1.25em 2em;
-  font-size: 0.75rem;
+  font-size: clamp(0.5rem, 2.5vw + 0.5rem, 0.75rem);
   text-align: center;
   font-weight: 700;
   text-decoration: none;
@@ -297,8 +274,9 @@ section:nth-child(2) h3 {
   overflow: visible;
   transition: all 0.3s ease-in-out;
   user-select: none;
+  /* touch devices */
 }
-.btn-check__a::before {
+.btn-check::before {
   content: " ";
   top: 50%;
   position: absolute;
@@ -310,7 +288,7 @@ section:nth-child(2) h3 {
   transform-origin: center;
   transition: background 0.3s linear, width 0.3s linear;
 }
-.btn-check__a .btn-check__text {
+.btn-check .btn-check__text {
   display: block;
   padding-left: 2em;
   text-align: left;
@@ -321,7 +299,7 @@ section:nth-child(2) h3 {
   color: hsl(0, 4%, 9%);
   transition: all 0.3s ease-in-out;
 }
-.btn-check__a .btn-check__top-key {
+.btn-check .btn-check__top-key {
   position: absolute;
   top: -2px;
   left: 0.625rem;
@@ -330,7 +308,7 @@ section:nth-child(2) h3 {
   background: hsl(0, 0%, 91%);
   transition: width 0.5s ease-out, left 0.3s ease-out;
 }
-.btn-check__a .btn-check__bottom-key-1 {
+.btn-check .btn-check__bottom-key-1 {
   position: absolute;
   right: 1.875rem;
   bottom: -2px;
@@ -339,7 +317,7 @@ section:nth-child(2) h3 {
   background: hsl(0, 0%, 91%);
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
-.btn-check__a .btn-check__bottom-key-2 {
+.btn-check .btn-check__bottom-key-2 {
   position: absolute;
   right: 0.625rem;
   bottom: -2px;
@@ -349,45 +327,45 @@ section:nth-child(2) h3 {
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 @media screen and (hover: hover) {
-  .btn-check__a:hover {
+  .btn-check:hover {
     color: hsl(0, 0%, 100%);
     background: black;
   }
-  .btn-check__a:hover::before {
+  .btn-check:hover::before {
     width: 0.9375rem;
     background: hsl(0, 0%, 91%);
   }
-  .btn-check__a:hover .btn-check__text {
+  .btn-check:hover .btn-check__text {
     padding-left: 1.5em;
     color: hsl(0, 0%, 100%);
   }
-  .btn-check__a:hover .btn-check__top-key {
+  .btn-check:hover .btn-check__top-key {
     left: -2px;
     width: 0px;
   }
-  .btn-check__a:hover .btn-check__bottom-key-1, .btn-check__a:hover .btn-check__bottom-key-2 {
+  .btn-check:hover .btn-check__bottom-key-1, .btn-check:hover .btn-check__bottom-key-2 {
     right: 0;
     width: 0;
   }
 }
 @media screen and (hover: none) {
-  .btn-check__a:active {
+  .btn-check:active {
     color: hsl(0, 0%, 100%);
     background: black;
   }
-  .btn-check__a:active::before {
+  .btn-check:active::before {
     width: 0.9375rem;
     background: hsl(0, 0%, 91%);
   }
-  .btn-check__a:active .btn-check__text {
+  .btn-check:active .btn-check__text {
     padding-left: 1.5em;
     color: hsl(0, 0%, 100%);
   }
-  .btn-check__a:active .btn-check__top-key {
+  .btn-check:active .btn-check__top-key {
     left: -2px;
     width: 0px;
   }
-  .btn-check__a:active .btn-check__bottom-key-1, .btn-check__a:active .btn-check__bottom-key-2 {
+  .btn-check:active .btn-check__bottom-key-1, .btn-check:active .btn-check__bottom-key-2 {
     right: 0;
     width: 0;
   }

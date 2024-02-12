@@ -1,16 +1,16 @@
 @use '../base/' as *;
 
 .main-section {
-	height: 60vh;
+	height: 100dvh;
 	display: flex;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-direction: column;
-	padding-block: min(10vh, 10rem);
+	padding-block: min(10vh, 8rem);
 	font-family: $ff-global;
 	text-align: center;
 	@include clamp-font-size(24px, 45px);
 	background-color: $clr-bg;
-	gap: 35px;
 	user-select: none;
 
 	&__title {
@@ -20,5 +20,7 @@
 
 	&__result {
 		color: $clr-font-black;
+		height: 2rem;
+		line-height: 2rem;
 	}
 }
