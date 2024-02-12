@@ -19,3 +19,17 @@
 		@content;
 	}
 }
+
+// hover
+@mixin hover {
+	@media screen and (hover: hover) {
+		@content;
+	}
+}
+
+// touch -> active
+@mixin touch {
+	@media screen and (hover: none) {
+		@content;
+	}
+}

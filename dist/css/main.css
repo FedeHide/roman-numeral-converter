@@ -138,49 +138,136 @@ li {
 }
 
 .main-section {
+  height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-block: min(10vh, 10rem);
   font-family: "GFS Didot", serif;
   text-align: center;
-  font-size: clamp(1.8rem, 2.5vw + 0.5rem, 2.8rem);
-  background-color: #e8e8e8;
-  gap: 20px;
+  font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.8125rem);
+  background-color: hsl(0, 0%, 91%);
+  gap: 35px;
+  user-select: none;
 }
 .main-section__title {
   font-weight: bold;
-  color: black;
+  color: hsl(0, 4%, 9%);
 }
 .main-section__result {
-  color: black;
+  color: hsl(0, 4%, 9%);
 }
 
+section:nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 40vh;
+}
+
+section:nth-child(2) h1 {
+  font-size: 2.5rem;
+  margin-block: 1.2rem;
+}
+
+section:nth-child(2) h3 {
+  font-size: 1.5rem;
+  margin-block: 1rem;
+}
+
+.main-section {
+  /* touch devices */
+}
 .main-section__input-container {
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0.5rem 1rem;
   font-size: 1.5rem;
   text-align: center;
   font-weight: 700;
   text-decoration: none;
   text-transform: none;
   letter-spacing: 0.05em;
-  border: 2px solid #000;
+  border: 2px solid hsl(0, 4%, 9%);
   outline: none;
-  color: #fff;
   cursor: pointer;
   overflow: visible;
   transition: all 0.3s ease-in-out;
   user-select: none;
 }
+.main-section__input-container .main-section__top-key {
+  position: absolute;
+  top: -2px;
+  left: 0.625rem;
+  width: 1.5625rem;
+  height: 2px;
+  background: hsl(0, 0%, 91%);
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+.main-section__input-container .main-section__bottom-key-1 {
+  position: absolute;
+  right: 1.875rem;
+  bottom: -2px;
+  width: 1.5625rem;
+  height: 2px;
+  background: hsl(0, 0%, 91%);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+.main-section__input-container .main-section__bottom-key-2 {
+  position: absolute;
+  right: 0.625rem;
+  bottom: -2px;
+  width: 0.625rem;
+  height: 2px;
+  background: hsl(0, 0%, 91%);
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+@media screen and (hover: hover) {
+  .main-section__input-container:hover {
+    color: hsl(0, 0%, 100%);
+  }
+  .main-section__input-container:hover::before {
+    width: 0.9375rem;
+    background: hsl(0, 0%, 91%);
+  }
+  .main-section__input-container:hover .main-section__top-key {
+    left: -2px;
+    width: 0px;
+  }
+  .main-section__input-container:hover .main-section__bottom-key-1, .main-section__input-container:hover .main-section__bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
+}
+@media screen and (hover: none) {
+  .main-section__input-container:active {
+    color: hsl(0, 0%, 100%);
+    background: black;
+  }
+  .main-section__input-container:active::before {
+    width: 0.9375rem;
+    background: hsl(0, 0%, 91%);
+  }
+  .main-section__input-container:active .main-section__top-key {
+    left: -2px;
+    width: 0px;
+  }
+  .main-section__input-container:active .main-section__bottom-key-1, .main-section__input-container:active .main-section__bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
+}
 .main-section__input {
-  color: #000;
+  color: hsl(0, 4%, 9%);
   text-align: center;
   background-color: transparent;
   border: none;
   caret-color: transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 .main-section__input:focus, .main-section__input:focus-visible, .main-section__input:valid {
   border: none;
@@ -190,6 +277,7 @@ li {
 .btn-check {
   background: transparent;
   border-style: none;
+  /* touch devices */
 }
 .btn-check__a {
   position: relative;
@@ -202,9 +290,9 @@ li {
   text-decoration: none;
   text-transform: none;
   letter-spacing: 0.05em;
-  border: 2px solid #000;
+  border: 2px solid hsl(0, 4%, 9%);
   outline: none;
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   overflow: visible;
   transition: all 0.3s ease-in-out;
@@ -217,7 +305,7 @@ li {
   left: 1.5em;
   width: 1.5625rem;
   height: 2px;
-  background: black;
+  background: hsl(0, 4%, 9%);
   transform: translateY(-50%);
   transform-origin: center;
   transition: background 0.3s linear, width 0.3s linear;
@@ -230,7 +318,7 @@ li {
   line-height: 1.33333em;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: hsl(0, 4%, 9%);
   transition: all 0.3s ease-in-out;
 }
 .btn-check__a .btn-check__top-key {
@@ -239,7 +327,7 @@ li {
   left: 0.625rem;
   width: 1.5625rem;
   height: 2px;
-  background: #e8e8e8;
+  background: hsl(0, 0%, 91%);
   transition: width 0.5s ease-out, left 0.3s ease-out;
 }
 .btn-check__a .btn-check__bottom-key-1 {
@@ -248,7 +336,7 @@ li {
   bottom: -2px;
   width: 1.5625rem;
   height: 2px;
-  background: #e8e8e8;
+  background: hsl(0, 0%, 91%);
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 .btn-check__a .btn-check__bottom-key-2 {
@@ -257,28 +345,52 @@ li {
   bottom: -2px;
   width: 0.625rem;
   height: 2px;
-  background: #e8e8e8;
+  background: hsl(0, 0%, 91%);
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
-.btn-check__a:hover {
-  color: white;
-  background: black;
+@media screen and (hover: hover) {
+  .btn-check__a:hover {
+    color: hsl(0, 0%, 100%);
+    background: black;
+  }
+  .btn-check__a:hover::before {
+    width: 0.9375rem;
+    background: hsl(0, 0%, 91%);
+  }
+  .btn-check__a:hover .btn-check__text {
+    padding-left: 1.5em;
+    color: hsl(0, 0%, 100%);
+  }
+  .btn-check__a:hover .btn-check__top-key {
+    left: -2px;
+    width: 0px;
+  }
+  .btn-check__a:hover .btn-check__bottom-key-1, .btn-check__a:hover .btn-check__bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
 }
-.btn-check__a:hover::before {
-  width: 0.9375rem;
-  background: white;
-}
-.btn-check__a:hover .btn-check__text {
-  padding-left: 1.5em;
-  color: white;
-}
-.btn-check__a:hover .btn-check__top-key {
-  left: -2px;
-  width: 0px;
-}
-.btn-check__a:hover .btn-check__bottom-key-1, .btn-check__a:hover .btn-check__bottom-key-2 {
-  right: 0;
-  width: 0;
+@media screen and (hover: none) {
+  .btn-check__a:active {
+    color: hsl(0, 0%, 100%);
+    background: black;
+  }
+  .btn-check__a:active::before {
+    width: 0.9375rem;
+    background: hsl(0, 0%, 91%);
+  }
+  .btn-check__a:active .btn-check__text {
+    padding-left: 1.5em;
+    color: hsl(0, 0%, 100%);
+  }
+  .btn-check__a:active .btn-check__top-key {
+    left: -2px;
+    width: 0px;
+  }
+  .btn-check__a:active .btn-check__bottom-key-1, .btn-check__a:active .btn-check__bottom-key-2 {
+    right: 0;
+    width: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

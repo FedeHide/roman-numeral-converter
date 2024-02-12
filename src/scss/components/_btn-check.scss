@@ -15,9 +15,9 @@
 		text-decoration: none;
 		text-transform: none;
 		letter-spacing: 0.05em;
-		border: 2px solid #000;
+		border: 2px solid $clr-font-black;
 		outline: none;
-		color: #fff;
+		color: $clr-font-white;
 		cursor: pointer;
 		overflow: visible;
 		transition: all 0.3s ease-in-out;
@@ -31,7 +31,7 @@
 		left: 1.5em;
 		width: 1.5625rem;
 		height: 2px;
-		background: black;
+		background: $clr-font-black;
 		transform: translateY(-50%);
 		transform-origin: center;
 		transition:
@@ -47,7 +47,7 @@
 		line-height: 1.33333em;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: black;
+		color: $clr-font-black;
 		transition: all 0.3s ease-in-out;
 	}
 
@@ -57,7 +57,7 @@
 		left: 0.625rem;
 		width: 1.5625rem;
 		height: 2px;
-		background: #e8e8e8;
+		background: $clr-bg;
 		transition:
 			width 0.5s ease-out,
 			left 0.3s ease-out;
@@ -69,7 +69,7 @@
 		bottom: -2px;
 		width: 1.5625rem;
 		height: 2px;
-		background: #e8e8e8;
+		background: $clr-bg;
 		transition:
 			width 0.5s ease-out,
 			right 0.3s ease-out;
@@ -81,35 +81,66 @@
 		bottom: -2px;
 		width: 0.625rem;
 		height: 2px;
-		background: #e8e8e8;
+		background: $clr-bg;
 		transition:
 			width 0.5s ease-out,
 			right 0.3s ease-out;
 	}
 
-	&__a:hover {
-		color: white;
-		background: black;
+	@include hover {
+		&__a:hover {
+			color: $clr-font-white;
+			background: black;
+		}
+
+		&__a:hover::before {
+			width: 0.9375rem;
+			background: $clr-bg;
+		}
+
+		&__a:hover &__text {
+			padding-left: 1.5em;
+			color: $clr-font-white;
+		}
+
+		&__a:hover &__top-key {
+			left: -2px;
+			width: 0px;
+		}
+
+		&__a:hover &__bottom-key-1,
+		&__a:hover &__bottom-key-2 {
+			right: 0;
+			width: 0;
+		}
 	}
 
-	&__a:hover::before {
-		width: 0.9375rem;
-		background: white;
-	}
+	/* touch devices */
+	@include touch {
+		&__a:active {
+			color: $clr-font-white;
+			background: black;
+		}
 
-	&__a:hover &__text {
-		padding-left: 1.5em;
-		color: white;
-	}
+		&__a:active::before {
+			width: 0.9375rem;
+			background: $clr-bg;
+		}
 
-	&__a:hover &__top-key {
-		left: -2px;
-		width: 0px;
-	}
+		&__a:active &__text {
+			padding-left: 1.5em;
+			color: $clr-font-white;
+		}
 
-	&__a:hover &__bottom-key-1,
-	&__a:hover &__bottom-key-2 {
-		right: 0;
-		width: 0;
+		&__a:active &__top-key {
+			left: -2px;
+			width: 0px;
+		}
+
+		&__a:active &__bottom-key-1,
+		&__a:active &__bottom-key-2 {
+			right: 0;
+			width: 0;
+		}
 	}
 }

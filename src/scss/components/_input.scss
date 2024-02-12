@@ -5,28 +5,110 @@
 		position: relative;
 		display: inline-block;
 		margin: 0;
-		padding: 0.5rem 1rem;
 		@include font-size(24px);
 		text-align: center;
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: none;
 		letter-spacing: 0.05em;
-		border: 2px solid #000;
+		border: 2px solid $clr-font-black;
 		outline: none;
-		color: #fff;
 		cursor: pointer;
 		overflow: visible;
 		transition: all 0.3s ease-in-out;
 		user-select: none;
 	}
 
+	&__input-container &__top-key {
+		position: absolute;
+		top: -2px;
+		left: 0.625rem;
+		width: 1.5625rem;
+		height: 2px;
+		background: $clr-bg;
+		transition:
+			width 0.5s ease-out,
+			left 0.3s ease-out;
+	}
+
+	&__input-container &__bottom-key-1 {
+		position: absolute;
+		right: 1.875rem;
+		bottom: -2px;
+		width: 1.5625rem;
+		height: 2px;
+		background: $clr-bg;
+		transition:
+			width 0.5s ease-out,
+			right 0.3s ease-out;
+	}
+
+	&__input-container &__bottom-key-2 {
+		position: absolute;
+		right: 0.625rem;
+		bottom: -2px;
+		width: 0.625rem;
+		height: 2px;
+		background: $clr-bg;
+		transition:
+			width 0.5s ease-out,
+			right 0.3s ease-out;
+	}
+
+	@media screen and (hover: hover) {
+		&__input-container:hover {
+			color: $clr-font-white;
+		}
+
+		&__input-container:hover::before {
+			width: 0.9375rem;
+			background: $clr-bg;
+		}
+
+		&__input-container:hover &__top-key {
+			left: -2px;
+			width: 0px;
+		}
+
+		&__input-container:hover &__bottom-key-1,
+		&__input-container:hover &__bottom-key-2 {
+			right: 0;
+			width: 0;
+		}
+	}
+
+	/* touch devices */
+	@media screen and (hover: none) {
+		&__input-container:active {
+			color: $clr-font-white;
+			background: black;
+		}
+
+		&__input-container:active::before {
+			width: 0.9375rem;
+			background: $clr-bg;
+		}
+
+		&__input-container:active &__top-key {
+			left: -2px;
+			width: 0px;
+		}
+
+		&__input-container:active &__bottom-key-1,
+		&__input-container:active &__bottom-key-2 {
+			right: 0;
+			width: 0;
+		}
+	}
+
 	&__input {
-		color: #000;
+		color: $clr-font-black;
 		text-align: center;
 		background-color: transparent;
 		border: none;
 		caret-color: transparent;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
 	}
 
 	&__input:focus,
