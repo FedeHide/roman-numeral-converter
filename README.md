@@ -4,7 +4,7 @@
 
 ------------
 
-<!-- [![palindome-checker-ss.png](https://i.postimg.cc/XqZKFdMW/palindome-checker-ss.png)](https://postimg.cc/jnbJYWd3) -->
+[![roman-numeral-converter-screenshot.webp](/public/images/roman-numeral-converter-screenshot.webp)](/public/images/roman-numeral-converter-screenshot.webp)
 
 ## Features
 
