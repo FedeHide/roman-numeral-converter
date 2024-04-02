@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 		icon: '/favicon.ico',
 	},
 	openGraph: {
-		url: 'https://roman-numeral-converter.vercel.app/',
+		url: 'https://roman-numeral-converter-wheat.vercel.app/',
 		type: 'website',
 		title: 'Roman numeral Converter | freeCodeCamp',
 		description: 'This is a Roman numeral converter, a freecodecamp assignment',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		site: 'https://roman-numeral-converter.vercel.app/',
+		site: 'https://roman-numeral-converter-wheat.vercel.app/',
 	},
 }
 
