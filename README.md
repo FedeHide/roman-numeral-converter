@@ -1,10 +1,20 @@
 # Roman numeral converter | freeCodeCamp
 
-### Check the site [Here](https://fedehide.github.io/roman-numeral-converter/ " Roman numeral converter")
+### Check the site [Here](https://roman-numeral-converter.vercel.app/ " Roman numeral converter")
+
+## Introduction
+This is a Roman numeral converter, a freecodecamp assignment.
+
+## Technologies Used
+<div>
+	<a href="https://skillicons.dev">
+		<img src="https://skillicons.dev/icons?i=nextjs,ts,sass" />
+	</a>
+</div>
 
 ------------
 
-[![roman-numeral-converter-screenshot.webp](/public/images/roman-numeral-converter-screenshot.webp)](/public/images/roman-numeral-converter-screenshot.webp)
+[![roman-numeral-converter-screenshot.webp](https://raw.githubusercontent.com/FedeHide/roman-numeral-converter/main/public/assets/roman-numeral-converter-screenshot.webp)](https://roman-numeral-converter.vercel.app/)
 
 ## Features
 
