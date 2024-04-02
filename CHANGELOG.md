@@ -1,6 +1,16 @@
 # Changelog
 
-## [v0.3.0](https://github.com/FedeHide/roman-numeral-converter/releases/tag/v0.3.0) (2024-xx-xx)
+## [v1.0.0](https://github.com/FedeHide/roman-numeral-converter/releases/tag/v1.0.0) (2024-04-02)
+
+### Features
+
+* **break:** migration to next js ([9fb4c71](https://github.com/FedeHide/roman-numeral-converter/commit/9fb4c71f3d359f79f07ff85fff014b5e1245c38c))
+
+### Fix
+
+* **hotfix:** url domain on readme and meta tags ([e271c10](https://github.com/FedeHide/roman-numeral-converter/commit/e271c1003965fdd0695bb178c50b904f13ad9e42))
+
+## [v0.3.0](https://github.com/FedeHide/roman-numeral-converter/releases/tag/v0.3.0) (2024-02-17)
 
 ### Other Changes
 
